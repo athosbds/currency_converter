@@ -10,4 +10,4 @@ class CurrencyConverter:
             if response.status_code == 200:
                 self.rates[currency] = response.json().get('rate', {})
             else:
-                raise Exception(f'Error fethcing')
+                raise Exception(f'Error fethcing {currency}')  

@@ -1,1 +1,89 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moedas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .resultado, .erro {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .erro {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Moedas</h1>
+        <form action="/converter" method="post">
+            <input type="number" name="valor" placeholder="Valor" required step="any">
+            
+            <select name="de">
+                <option value="USD">USD</option>
+                <option value="BRL">BRL</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+            </select>
+
+            <span>para</span>
+
+            <select name="para">
+                <option value="USD">USD</option>
+                <option value="BRL">BRL</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+            </select>
+
+            <button type="submit">Converter</button>
+        </form>
+
+        {% if resultado %}
+            <div class="resultado">
+                {{ valor }} {{ de }} = {{ resultado }} {{ para }}
+            </div>
+        {% elif erro %}
+            <div class="erro">
+                {{ erro }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
