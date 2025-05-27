@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+base_url = 'https://api.exchangerate-api.com/v4/latest/'
+
 @app.route('/')
 def index():
     return render_template('index.html')
