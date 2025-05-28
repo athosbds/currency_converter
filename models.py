@@ -11,4 +11,13 @@ class CurrencyConverter:
                 self.rates[currency] = response.json().get('rate', {})
             else:
                 raise Exception(f'Error fethcing {currency}')  
-    def converter
+    def converter(self, amount, from_currency, to_currency):
+        if from_currency == to_currency:
+            return amount
+        if from_currency == 'USD':
+            base_amount = amount
+        else:
+            base_amount = amount / self.rates['USD'].get(from_currency, 1)
+        if to_currency == 'USD':
+            return base_amount
+        return base_amount * self.rates['USD'].get(to_currency, 1)
