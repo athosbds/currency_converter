@@ -13,6 +13,8 @@ API_URLS = {
 
 @app.route('/')
 def index():
+    amount = None
+    error = None
     return render_template('index.html')
 if __name__ == "__main__":
     app.run(debug=True)
