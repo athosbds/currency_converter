@@ -6,7 +6,7 @@ base_url = 'https://api.exchangerate-api.com/v4/latest/'
 
 API_URLS = {
     'USD': base_url + 'USD',
-    'GBP': base_url + 'GBP',
+    'BRL': base_url + 'BRL',
     'EUR': base_url + 'EUR',
 }
 
