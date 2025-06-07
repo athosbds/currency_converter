@@ -10,11 +10,12 @@ API_URLS = {
     'EUR': base_url + 'EUR',
 }
 
+converter = CurrencyConverter(API_URLS)
 
 @app.route('/')
 def index():
-    amount = None
+    result = None
     error = None
-    return render_template('index.html')
+    return render_template('index.html', result=result, error=error)
 if __name__ == "__main__":
     app.run(debug=True)
