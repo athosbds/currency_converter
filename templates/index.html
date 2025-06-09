@@ -7,16 +7,23 @@
 </head>
 <body>
     <h2> Conversor De Moedas</h2>
-    <form method="post">
-        <label for="amount">
-            <input type="text"> <br>
+    <form method="post" action="">
+        <label for="amount"> Valor:
+            <input type="number" name="amount" id="amount"<br>
         </label>
         <label for="from_currency">De:</label>
         <select name="from_currency" id="from_currency">
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
             <option value="BRL">BRL</option>
-        </select>
+        <label for="to_currency">Para: <label>
+        <select name="to_currency" id="to_currency"></select>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="BRL">BRL</option>
+        </select> <br><br>
+        <button type="submit">Converter</button>
     </form>
+    
 </body>
 </html>
