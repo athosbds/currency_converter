@@ -26,7 +26,11 @@
             </select> <br><br>
             <button type="submit">Converter</button>
         </form>
-        <div id="result"></div>
+        {% if result is none %}
+            <h3>{{ result }}</h3>
+        {% elif error is not none %}
+            <h3> {{ error }}</h3>
+        {% endif %}
     <div>
 </body>
 </html>

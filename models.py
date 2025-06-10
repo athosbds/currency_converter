@@ -5,13 +5,17 @@ class CurrencyConverter:
         self.api_urls = api_urls
         self.rates = {}
     def fetch_rates(self):
+        """
+        Aqui busca as taxas de câmbio apartir das 
+        URL Api presentes app.py"""
         for currency, url in self.api_urls:
             response = requests.get(url)
             if response.status_code == 200:
                 self.rates[currency] = response.json().get('rate', {})
             else:
                 raise Exception(f'Error fethcing {currency}')  
-    def converter(self, amount, from_currency, to_currency):
+    def convert(self, amount, from_currency, to_currency):
+        """Conversões utilizando o Dólar americano"""
         if from_currency == to_currency:
             return amount
         if from_currency == 'USD':
