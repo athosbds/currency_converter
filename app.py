@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from models import CurrencyConverter
 app = Flask(__name__)
 
-base_url = 'https://api.exchangerate-api.com/v4/latest/'
+base_url = 'https://api.exchangerate.host/latest?base='
 
 API_URLS = {
     'USD': base_url + 'USD',

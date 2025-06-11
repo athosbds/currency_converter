@@ -19,16 +19,11 @@ class CurrencyConverter:
         if from_currency == to_currency:
                 return round(amount, 2)
         try:
-            usd_rates = self.rates['USD']
-            if from_currency != 'USD':
-                amount_usd = amount /  usd_rates[from_currency]
-            else:
-               amount_usd = amount
-            if to_currency != 'USD':
-                converter_amount = amount_usd * usd_rates[to_currency]
-            else:
-                converter_amount =  amount_usd
-            return round(converter_amount, 2)
+            from_rates = self.rates[from_currency]
+            if to_currency not in from_rates:
+                raise Exception('Conversão não suportada')
+            converted_amount =  amount * from_rates[to_currency] 
+            return round(converted_amount, 2)
         except KeyError:
-            raise Exception('Moeda não suportada')
+            raise Exception('Moeda não suportada')           
             

@@ -26,11 +26,11 @@
             </select> <br><br>
             <button type="submit">Converter</button>
         </form>
-        {% if result is none %}
-            <h3>{{ result }}</h3>
+        {% if result is not none %}
+            <h3>Resultado: {{ result }} {{ request.form.get('to_currency') }}</h3>
         {% elif error is not none %}
-            <h3> {{ error }}</h3>
+            <h3> Erro: {{ error }}</h3>
         {% endif %}
-    <div>
+    </div>
 </body>
 </html>
