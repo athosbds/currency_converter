@@ -4,13 +4,15 @@ class CurrencyConverter:
     def convert(self, amount, from_currency, to_currency):
         if from_currency == to_currency:
             return round(amount, 2)
-        url = url = f"https://api.exchangerate.host/convert?from={from_currency}&to={to_currency}&amount={amount}"
+        url = f"https://open.er-api.com/v6/latest/{from_currency}"
         respo =  requests.get(url)
         if respo.status_code == 200:
             data = respo.json()
-            print(f'Resposta da API: {data}')     
-            if data.get('success') and 'result' in data:
-                return round(data['result'], 2)
+            print(f'Resposta da API: {data}')
+            rates = data.get('rates')     
+            if rates and to_currency in rates:
+                rate = rates[to_currency]
+                return round(amount * rate, 2)
             else:
                 raise Exception(f'Inválido')
         else:
