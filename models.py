@@ -8,7 +8,7 @@ class CurrencyConverter:
         respo =  requests.get(url)
         if respo.status_code == 200:
             data = respo.json()
-            print(f'Resposta da API: {data}')
+            print(f'Resposta da API: {data}') #só pra confirmar no terminal se api tá disponível
             rates = data.get('rates')     
             if rates and to_currency in rates:
                 rate = rates[to_currency]
