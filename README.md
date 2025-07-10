@@ -1,6 +1,6 @@
 # 💱 Currency Converter
 
-Um conversor de moedas simples feito em **Python**, usando:
+Um conversor de moedas feito em **Python**, usando:
 
 - A biblioteca `requests` para acessar uma **API de câmbio**
 - A biblioteca `Flask` para criar uma **interface web**
@@ -10,7 +10,7 @@ Um conversor de moedas simples feito em **Python**, usando:
 
 ## ✅ O que esse projeto faz
 
-- Converte valores entre moedas (ex: dólar → real, euro → iene)
+- Converte valores entre moedas (ex: dólar → real, euro → )
 - Usa taxas de câmbio **atualizadas em tempo real**
 - Mostra uma interface simples no navegador
 
