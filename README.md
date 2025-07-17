@@ -8,7 +8,7 @@ Um conversor de moedas feito em **Python**, usando:
 
 ---
 
-## ✅ O que esse projeto faz
+## O que esse projeto faz
 
 - Converte valores entre moedas (ex: dólar → real, euro → )
 - Usa taxas de câmbio **atualizadas em tempo real**
@@ -16,7 +16,7 @@ Um conversor de moedas feito em **Python**, usando:
 
 ---
 
-## 🧰 Tecnologias e bibliotecas usadas
+## Tecnologias
 
 - Python 3
 - [Flask](https://flask.palletsprojects.com/) – cria o site local
@@ -25,7 +25,7 @@ Um conversor de moedas feito em **Python**, usando:
 
 ---
 
-## ⚙️ Como instalar e rodar
+## Como instalar e rodar
 
 1. **Clone o repositório:**
 
