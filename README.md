@@ -8,6 +8,8 @@ Um conversor de moedas feito em **Python**, usando:
 
 ---
 
+![Imagem Ilustrativa](assets/view.gif)
+
 ## O que esse projeto faz
 
 - Converte valores entre moedas (ex: dólar → real, euro → )
@@ -34,6 +36,5 @@ git clone https://github.com/seu-usuario/currency_converter.git
 cd currency_converter
 ```
 
-![Imagem Ilustrativa](assets/view.gif)
 
 
