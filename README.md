@@ -34,5 +34,6 @@ git clone https://github.com/seu-usuario/currency_converter.git
 cd currency_converter
 ```
 
-![Imagem Ilustrativa](assets/para/view.gif)
+![Imagem Ilustrativa](assets/view.gif)
+
 
