@@ -32,7 +32,6 @@ Um conversor de moedas feito em **Python**, usando:
 ```bash
 git clone https://github.com/seu-usuario/currency_converter.git
 cd currency_converter
+```
 
-## Imagem Ilustrativa
-
-![Imagem Ilustrativa](assets/view.gif)
+![Imagem Ilustrativa](assets/para/view.gif)
