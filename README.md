@@ -1,40 +1,61 @@
-# 💱 Currency Converter
+# 💱 Currency Converter (Python + Flask)
 
-Um conversor de moedas feito em **Python**, usando:
+[![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/flask-2.x-black)](https://flask.palletsprojects.com/)
+[![API](https://img.shields.io/badge/Exchange%20Rates-API-orange)](https://www.exchangerate-api.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-- A biblioteca `requests` para acessar uma **API de câmbio**
-- A biblioteca `Flask` para criar uma **interface web**
-- **Programação orientada a objetos (POO)** com classes para organizar o código
+## Overview
 
----
-
-![Imagem Ilustrativa](assets/view.gif)
-
-## O que esse projeto faz
-
-- Converte valores entre moedas (ex: dólar → real, euro → )
-- Usa taxas de câmbio **atualizadas em tempo real**
-- Mostra uma interface simples no navegador
+Este projeto é um **Conversor de Moedas** desenvolvido em Python, com interface web usando Flask e integração com uma API de câmbio em tempo real.  
+Ele segue uma arquitetura organizada com **Programação Orientada a Objetos (POO)**, separando lógica, serviços e rotas.
 
 ---
 
-## Tecnologias
+## Features
 
-- Python 3
-- [Flask](https://flask.palletsprojects.com/) – cria o site local
-- [Requests](https://docs.python-requests.org/en/latest/) – faz requisições HTTP
-- API de câmbio (como [ExchangeRate API](https://www.exchangerate-api.com/) ou [Exchangeratesapi.io](https://exchangeratesapi.io/))
+- Conversão entre diversas moedas (USD, BRL, EUR, GBP e outras)
+- Taxas atualizadas em **tempo real**
+- Interface simples acessível pelo navegador
+- Arquitetura organizada com POO
 
 ---
 
-## Como instalar e rodar
+## Preview
 
-1. **Clone o repositório:**
+![Preview](assets/view.gif)
+
+---
+
+## Tecnologias Utilizadas
+
+- **Python 3.x**
+- **Flask** – Interface web  
+  https://flask.palletsprojects.com/
+- **Requests** – Requisições HTTP  
+  https://docs.python-requests.org/
+- **ExchangeRate API** – Dados de câmbio  
+  https://www.exchangerate-api.com/
+
+---
+
+## Como Instalar e Rodar
+
+1. **Clone o repositório**
 
 ```bash
 git clone https://github.com/seu-usuario/currency_converter.git
 cd currency_converter
-```
+
+
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Linux/macOS
+source venv/bin/activate
+
+
+
 
 
 
