@@ -14,7 +14,7 @@ Ele segue uma arquitetura organizada com **Programação Orientada a Objetos (PO
 
 ## Features
 
-- Conversão entre diversas moedas (USD, BRL, EUR, GBP e outras)
+- Conversão entre diversas moedas (USD, BRL, EUR)
 - Taxas atualizadas em **tempo real**
 - Interface simples acessível pelo navegador
 - Arquitetura organizada com POO
